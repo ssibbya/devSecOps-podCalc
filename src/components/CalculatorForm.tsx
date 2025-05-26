@@ -99,7 +99,7 @@ export default function CalculatorForm({ onCalculate }: Props) {
           className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg transition-colors"
         >
           <RefreshCw className="h-4 w-4" />
-          Reset
+          Clear
         </button>
       </div>
     </form>
