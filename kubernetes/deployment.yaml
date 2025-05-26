@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: pod-calulator
-        image: 
+        image: ghcr.io/ssibbya/devsecops-podcalc:sha-dc5ea8ae49aeada4eae6a048df24d4d90b0de305
         # Image will be automatically updated by CI/CD pipeline
         imagePullPolicy: Always
         ports:
