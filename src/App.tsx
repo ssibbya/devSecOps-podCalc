@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, RefreshCw } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 import CalculatorForm from './components/CalculatorForm';
 import ResultCard from './components/ResultCard';
 import { calculatePods } from './utils/podCalculator';
@@ -14,27 +14,6 @@ function App() {
   });
 
   const [result, setResult] = useState<number | null>(null);
-
-  const handleCalculate = () => {
-    const pods = calculatePods({
-      totalCpu: formValues.totalCpu,
-      totalRam: formValues.totalRam,
-      cpuPerPod: formValues.cpuPerPod,
-      ramPerPod: formValues.ramPerPod
-    });
-    setResult(pods);
-  };
-
-  const handleReset = () => {
-    setFormValues({
-      //replicas: 1,
-      cpuPerPod: 0.5,
-      ramPerPod: 4,
-      totalCpu: 2,
-      totalRam: 8,
-    });
-    setResult(null);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-gray-100 flex flex-col items-center justify-center p-4">
