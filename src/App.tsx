@@ -2,16 +2,10 @@ import React, { useState } from 'react';
 import { Calculator } from 'lucide-react';
 import CalculatorForm from './components/CalculatorForm';
 import ResultCard from './components/ResultCard';
-import { calculatePods } from './utils/podCalculator';
+//import { calculatePods } from './utils/podCalculator';
 
 function App() {
-  const [formValues, setFormValues] = useState({
-    //replicas: 1,
-    cpuPerPod: 0.5,
-    ramPerPod: 1,
-    totalCpu: 2,
-    totalRam: 8,
-  });
+
 
   const [result, setResult] = useState<number | null>(null);
 
