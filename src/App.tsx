@@ -17,7 +17,7 @@ function App() {
           <Calculator className="h-8 w-8" />
           Pod Calculator
           </h1>
-          <p className="text-slate-300 mt-1 font-light">Estimate Kubernetes pods based on your workload</p>
+          <p className="text-slate-300 mt-1 font-light">Easily Estimate Kubernetes pods based on your workload</p>
         </div>
       <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="flex flex-col gap-4">
