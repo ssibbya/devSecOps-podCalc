@@ -1,4 +1,4 @@
-# DevSecOps Pipeline Implementation for Pod Calculator Game
+# DevSecOps Pipeline Implementation for Pod Calculator
 
 ![Screenshot 2025-03-04 at 7 16 48 PM](https://github.com/user-attachments/assets/7ed79f9c-9144-4870-accd-500085a15592)
 
