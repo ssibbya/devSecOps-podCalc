@@ -2,16 +2,16 @@
 
 ![Screenshot 2025-03-04 at 7 16 48 PM](https://github.com/user-attachments/assets/7ed79f9c-9144-4870-accd-500085a15592)
 
-![image](https://github.com/user-attachments/assets/5b2813a5-f493-4665-8964-77359b5be93a)
+<img width="874" alt="Screenshot 2025-05-26 at 1 05 03 PM" src="https://github.com/user-attachments/assets/4c76ee93-fe00-4009-9bbf-e6c2b7b8df1f" />
 
 ## Features
 
-- 🎮 Fully functional Pod Calculator game
-- 📊 Score tracking for X, O, and draws
-- 📜 Game history with timestamps
-- 🏆 Highlights winning combinations
-- 🔄 Reset game and statistics
-- 📱 Responsive design for all devices
+🧮 Fully functional Pod Calculator application
+📊 Resource-based pod estimation (CPU and RAM)
+🔢 Real-time calculation with input validation
+⚡ Handles both CPU-limited and RAM-limited scenarios
+🎯 Accurate rounding using ceiling function
+📱 Responsive design for all devices
 
 ## Technologies Used
 
@@ -22,26 +22,43 @@
 
 ## Project Structure
 
-```
 src/
 ├── components/               # UI Components
 │   ├── CalculatorForm.tsx       
 │   └── ResultCard.tsx   
 ├── utils/                    # Logic utilities
 │   └── podCalculator.ts    
+├── __tests__/               # Unit tests
+│   └── podCalculator.test.ts
 ├── App.tsx                   # Main application component
 └── main.tsx                  # Entry point
-```
 
-## Game Logic
+## Calculation Logic
 
-The game implements the following rules:
+The Pod Calculator implements the following logic:
 
-1. X goes first, followed by O
-2. The first player to get 3 of their marks in a row (horizontally, vertically, or diagonally) wins
-3. If all 9 squares are filled and no player has 3 marks in a row, the game is a draw
-4. Winning combinations are highlighted
-5. Game statistics are tracked and displayed
+- Accepts four inputs: CPU per pod, RAM per pod, total CPU required, and total RAM required
+- Validates all inputs are positive numbers (returns 0 for invalid inputs)
+- Calculates required pods based on CPU: Math.ceil(totalCpu / cpuPerPod)
+- Calculates required pods based on RAM: Math.ceil(totalRam / ramPerPod)
+- Returns the maximum of both calculations (the limiting resource determines pod count)
+- Uses ceiling function to ensure sufficient resources are allocated
+
+## Example Calculations
+
+- CPU-limited: 8 total CPU, 1 CPU per pod = 8 pods needed
+- RAM-limited: 16GB total RAM, 2GB per pod = 8 pods needed
+- Balanced: Takes the higher requirement to satisfy both constraints
+- Fractional: 1 CPU total, 0.3 CPU per pod = 4 pods (rounded up)
+
+## Testing
+
+The application includes comprehensive unit tests covering:
+
+- Basic calculation scenarios
+- Edge cases and validation
+- Floating-point precision handling
+- TypeScript type safety
 
 ## Getting Started
 
@@ -54,8 +71,8 @@ The game implements the following rules:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/devsecops-demo.git
-   cd devsecops-demo
+   git clone https://github.com/yourusername/devSecOps-podCalc.git
+   cd devSecOps-podCalc
    ```
 
 2. Install dependencies:
