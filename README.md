@@ -2,16 +2,16 @@
 
 ![Screenshot 2025-03-04 at 7 16 48 PM](https://github.com/user-attachments/assets/7ed79f9c-9144-4870-accd-500085a15592)
 
-<img width="874" alt="Screenshot 2025-05-26 at 1 05 03 PM" src="https://github.com/user-attachments/assets/4c76ee93-fe00-4009-9bbf-e6c2b7b8df1f" />
+<img width="1720" alt="Screenshot 2025-05-26 at 1 13 41 PM" src="https://github.com/user-attachments/assets/2ae064ad-4c86-4d73-9221-222faaec41bd" />
 
 ## Features
 
-🧮 Fully functional Pod Calculator application
-📊 Resource-based pod estimation (CPU and RAM)
-🔢 Real-time calculation with input validation
-⚡ Handles both CPU-limited and RAM-limited scenarios
-🎯 Accurate rounding using ceiling function
-📱 Responsive design for all devices
+- 🧮 Fully functional Pod Calculator application
+- 📊 Resource-based pod estimation (CPU and RAM)
+- 🔢 Real-time calculation with input validation
+- ⚡ Handles both CPU-limited and RAM-limited scenarios
+- 🎯 Accurate rounding using ceiling function
+- 📱 Responsive design for all devices
 
 ## Technologies Used
 
@@ -22,6 +22,7 @@
 
 ## Project Structure
 
+```
 src/
 ├── components/               # UI Components
 │   ├── CalculatorForm.tsx       
@@ -32,6 +33,7 @@ src/
 │   └── podCalculator.test.ts
 ├── App.tsx                   # Main application component
 └── main.tsx                  # Entry point
+```
 
 ## Calculation Logic
 
