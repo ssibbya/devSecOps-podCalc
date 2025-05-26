@@ -132,8 +132,8 @@ jobs:
       - name: Set image tag output
         id: set_output
         run: |
-        echo "image_tag=sha-${{ github.sha }}" >> $GITHUB_OUTPUT
-        echo "full_image=${{ env.REGISTRY }}/${{ github.repository }}:sha-${{ github.sha }}" >> $GITHUB_OUTPUT
+          echo "image_tag=sha-${{ github.sha }}" >> $GITHUB_OUTPUT
+          echo "full_image=${{ env.REGISTRY }}/${{ github.repository }}:sha-${{ github.sha }}" >> $GITHUB_OUTPUT
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
